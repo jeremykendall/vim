@@ -7,7 +7,7 @@ call pathogen#helptags()
 filetype plugin on
 filetype plugin indent on
 
-" Set up puppet manifest adn spec options
+" Set up puppet manifest and spec options
 au BufRead,BufNewFile *.pp set filetype=puppet
 au BufRead,BufNewFile *_spec.rb nmap <F8> :!rspec --color %<CR>
 
