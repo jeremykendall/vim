@@ -18,7 +18,7 @@ Manual installation
 
 1. Check out from github
 
-        git clone git://github.com/vgod/vimrc.git ~/.vim
+        git clone git://github.com/jeremykendall/vim.git ~/.vim
         cd ~/.vim
         git submodule update --init
 
