@@ -21,7 +21,7 @@ map! jj <Esc>
 
 syntax on
 
-let g:solarized_termcolors=256
+set t_Co=256
 colorscheme solarized
 
 if has('gui_running')
