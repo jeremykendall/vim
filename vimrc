@@ -1,3 +1,8 @@
+" Disable the splash screen
+:set shortmess +=I
+
+set clipboard=unnamed
+
 " Automatically reload .vimrc when changing
 autocmd! bufwritepost .vimrc source! %
 
@@ -13,6 +18,12 @@ au BufRead,BufNewFile *_spec.rb nmap <F8> :!rspec --color %<CR>
 
 let mapleader=","
 
+" Load vimrc in new tab with leader-v
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
+set wildmenu
+set wildmode=list:longest
+set ttyfast
 set nocompatible
 set modeline
 set modelines=5
@@ -48,6 +59,8 @@ set shiftround
 set autoindent
 set smartindent
 
+set pastetoggle=<F11>
+
 " Source .vimrc on change
 autocmd! bufwritepost .vimrc source $MYVIMRC
 
@@ -65,6 +78,10 @@ nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 :let NERDTreeShowBookmarks=1
 :let NERDTreeShowHidden=1
 :let NERDTreeQuitOnOpen=0
+
+" Allows closing vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 :map <Leader>, :NERDTreeToggle<CR>
 
 set undofile
@@ -108,3 +125,17 @@ nnoremap <C-l> <C-w>l
 
 " gist-vim
 let g:gist_open_browser_after_post = 1
+
+" ctags
+set tags=$HOME/.vim.tags
+
+" Load a tag file
+" Loads a tag file from ~/.vim.tags/, based on the argument provided. The
+" command "Ltag"" is mapped to this function.
+:function! LoadTags(file)
+:   let tagspath = $HOME . "/.vim.tags/" . a:file
+:   let tagcommand = 'set tags+=' . tagspath
+:   execute tagcommand
+:endfunction
+:command! -nargs=1 Ltag :call LoadTags("<args>")
+:call LoadTags('PHPUnit')
