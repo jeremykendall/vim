@@ -28,7 +28,7 @@ set nocompatible
 set modeline
 set modelines=5
 
-map! jj <Esc>
+map! kj <Esc>
 
 syntax on
 
@@ -43,7 +43,7 @@ endif
 
 set number
 
-set colorcolumn=85
+set colorcolumn=80
 set textwidth=80
 set tabstop=4
 set softtabstop=4
@@ -126,8 +126,12 @@ nnoremap <C-l> <C-w>l
 " gist-vim
 let g:gist_open_browser_after_post = 1
 
+" "Hidden" buffers -- i.e., don't require saving before editing another file.
+" Calling quit will prompt you to save unsaved buffers anyways.
+" set hidden
+
 " ctags
-set tags=$HOME/.vim.tags
+set tags=tags
 
 " Load a tag file
 " Loads a tag file from ~/.vim.tags/, based on the argument provided. The
@@ -139,6 +143,7 @@ set tags=$HOME/.vim.tags
 :endfunction
 :command! -nargs=1 Ltag :call LoadTags("<args>")
 :call LoadTags('PHPUnit')
+:call LoadTags('Composer')
 
 " vim-php-cs-fixer
 let g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer"  " define the path to the php-cs-fixer.phar
