@@ -1,3 +1,5 @@
+set nocompatible
+
 " Disable the splash screen
 :set shortmess +=I
 
@@ -15,6 +17,7 @@ filetype plugin indent on
 " Set up puppet manifest and spec options
 au BufRead,BufNewFile *.pp set filetype=puppet
 au BufRead,BufNewFile *_spec.rb nmap <F8> :!rspec --color %<CR>
+au BufRead,BufNewFile *.twig set syntax=htmljinja
 
 let mapleader=","
 
@@ -24,7 +27,6 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
 set wildmenu
 set wildmode=list:longest
 set ttyfast
-set nocompatible
 set modeline
 set modelines=5
 
@@ -35,16 +37,12 @@ syntax on
 set t_Co=256
 colorscheme solarized
 
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
+set background=dark
 
 set number
 
 set colorcolumn=80
-set textwidth=80
+" set textwidth=80
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -144,6 +142,7 @@ set tags=tags
 :command! -nargs=1 Ltag :call LoadTags("<args>")
 :call LoadTags('PHPUnit')
 :call LoadTags('Composer')
+:call LoadTags('OpenSky')
 
 " vim-php-cs-fixer
 let g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer"  " define the path to the php-cs-fixer.phar
