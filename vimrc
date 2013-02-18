@@ -153,3 +153,6 @@ let g:php_cs_fixer_fixers_list = ""             " List of fixers
 let g:php_cs_fixer_default_mapping = 0          " Enable the mapping by default (<leader>pcd)
 let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run option
 map <leader>pcf :call PhpCsFixerFixFile()<CR>
+
+" ctrlp ignore
+set wildignore+=*/tmp/*,*/build/*,*/log/*,*.~,*.so,*.swp,*.zip,*/docs/*
