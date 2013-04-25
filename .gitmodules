@@ -37,3 +37,6 @@
 [submodule "bundle/supertab.vim"]
 	path = bundle/supertab.vim
 	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/html5-vim"]
+	path = bundle/html5-vim
+	url = https://github.com/othree/html5.vim.git

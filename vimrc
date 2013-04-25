@@ -9,8 +9,9 @@ set clipboard=unnamed
 autocmd! bufwritepost .vimrc source! %
 
 filetype off
-call pathogen#infect()
-call pathogen#helptags()
+execute pathogen#infect()
+execute pathogen#helptags()
+syntax on
 filetype plugin on
 filetype plugin indent on
 
@@ -32,7 +33,6 @@ set modelines=5
 
 map! kj <Esc>
 
-syntax on
 
 set t_Co=256
 colorscheme solarized
@@ -155,6 +155,6 @@ let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run opti
 map <leader>pcf :call PhpCsFixerFixFile()<CR>
 
 " ctrlp ignore
-set wildignore+=*/tmp/*,*/build/*,*/log/*,*.~,*.so,*.swp,*.zip,*/docs/*,*/cache/*,*/vendor/*
+set wildignore+=*/tmp/*,*/build/*,*/log/*,*.~,*.so,*.swp,*.zip,*/docs/*,*/cache/*
 " ctrlp starting directory
 let g:ctrlp_working_path_mode = ''
