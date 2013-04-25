@@ -126,7 +126,7 @@ let g:gist_open_browser_after_post = 1
 
 " "Hidden" buffers -- i.e., don't require saving before editing another file.
 " Calling quit will prompt you to save unsaved buffers anyways.
-" set hidden
+set hidden
 
 " ctags
 set tags=tags
@@ -155,4 +155,6 @@ let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run opti
 map <leader>pcf :call PhpCsFixerFixFile()<CR>
 
 " ctrlp ignore
-set wildignore+=*/tmp/*,*/build/*,*/log/*,*.~,*.so,*.swp,*.zip,*/docs/*
+set wildignore+=*/tmp/*,*/build/*,*/log/*,*.~,*.so,*.swp,*.zip,*/docs/*,*/cache/*,*/vendor/*
+" ctrlp starting directory
+let g:ctrlp_working_path_mode = ''
