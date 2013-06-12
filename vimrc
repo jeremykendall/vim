@@ -12,7 +12,6 @@ filetype off
 execute pathogen#infect()
 execute pathogen#helptags()
 syntax on
-filetype plugin on
 filetype plugin indent on
 
 " Set up puppet manifest and spec options
@@ -25,6 +24,10 @@ let mapleader=","
 " Load vimrc in new tab with leader-v
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
+" tab navigation
+nmap Z :tabprev<CR>
+nmap X :tabnext<CR>
+
 set wildmenu
 set wildmode=list:longest
 set ttyfast
@@ -33,16 +36,21 @@ set modelines=5
 
 map! kj <Esc>
 
-
-set t_Co=256
+set background=dark
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
 colorscheme solarized
 
 set background=dark
 
 set number
 
-set colorcolumn=80
+" Show me when I'm getting too close to 80 characters
+if version > 702
+    set colorcolumn=80
+endif
 " set textwidth=80
+
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -50,7 +58,9 @@ set expandtab
 set smarttab
 
 set ruler
+set cursorline
 set encoding=utf-8
+set fileencodings=utf-8
 set scrolloff=3
 set showmode
 set shiftround
@@ -143,6 +153,7 @@ set tags=tags
 :call LoadTags('PHPUnit')
 :call LoadTags('Composer')
 :call LoadTags('OpenSky')
+:call LoadTags('Symfony2')
 
 " vim-php-cs-fixer
 let g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer"  " define the path to the php-cs-fixer.phar
@@ -158,3 +169,6 @@ map <leader>pcf :call PhpCsFixerFixFile()<CR>
 set wildignore+=*/tmp/*,*/build/*,*/log/*,*.~,*.so,*.swp,*.zip,*/docs/*,*/cache/*
 " ctrlp starting directory
 let g:ctrlp_working_path_mode = ''
+
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabClosePreviewOnPopupClose = 1
