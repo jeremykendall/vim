@@ -36,9 +36,10 @@ set modelines=5
 
 map! kj <Esc>
 
+set t_Co=256
 set background=dark
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
+"let g:solarized_termcolors=256
+"let g:solarized_contrast="high"
 colorscheme solarized
 
 set background=dark
@@ -169,6 +170,3 @@ map <leader>pcf :call PhpCsFixerFixFile()<CR>
 set wildignore+=*/tmp/*,*/build/*,*/log/*,*.~,*.so,*.swp,*.zip,*/docs/*,*/cache/*
 " ctrlp starting directory
 let g:ctrlp_working_path_mode = ''
-
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabClosePreviewOnPopupClose = 1
