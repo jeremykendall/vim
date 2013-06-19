@@ -2,9 +2,6 @@ let mapleader=","
 
 map! kj <Esc>
 
-" Load vimrc in new tab with leader-v
-nmap <leader>v :tabedit $MYVIMRC<CR>
-
 " tab navigation
 nmap Z :tabprev<CR>
 nmap X :tabnext<CR>
@@ -43,3 +40,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 :map <Leader>, :NERDTreeToggle<CR>
+
+" Load vimrc in new tab with leader-v
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
+" Source vimrc
+:nnoremap <leader>sv :source $MYVIMRC<cr>
