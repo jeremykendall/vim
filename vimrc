@@ -71,3 +71,6 @@ set showmatch
 " "Hidden" buffers -- i.e., don't require saving before editing another file.
 " Calling quit will prompt you to save unsaved buffers anyways.
 set hidden
+
+" Resize splits when resizing terminal
+autocmd VimResized * wincmd =
