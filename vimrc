@@ -26,9 +26,7 @@ set modelines=5
 set number
 
 " Show me when I'm getting too close to 80 characters
-if (exists('colorcolumn'))
-    set colorcolumn=80
-endif
+set colorcolumn=81
 
 set tabstop=4
 set softtabstop=4
@@ -76,3 +74,6 @@ set hidden
 
 " Resize splits when resizing terminal
 autocmd VimResized * wincmd =
+
+" Open current file in Marked2
+:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
