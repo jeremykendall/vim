@@ -26,7 +26,7 @@ set modelines=5
 set number
 
 " Show me when I'm getting too close to 80 characters
-if version > 702
+if (exists('colorcolumn'))
     set colorcolumn=80
 endif
 
@@ -52,9 +52,11 @@ set pastetoggle=<F11>
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
 " Stolen from https://github.com/skwp/dotfiles/blob/master/vimrc
-silent !mkdir ~/.vim/backups > /dev/null 2>&1
-set undodir=~/.vim/backups
-set undofile
+if (exists('+undofile') && exists('+undodir'))
+    silent !mkdir ~/.vim/backups > /dev/null 2>&1
+    set undodir=~/.vim/backups
+    set undofile
+endif
 
 " ================ Turn Off Swap Files ==============
 " Stolen from https://github.com/skwp/dotfiles/blob/master/vimrc
