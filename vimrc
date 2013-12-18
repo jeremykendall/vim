@@ -5,6 +5,10 @@ set nocompatible
 
 set clipboard=unnamed
 
+" Make backspace work properly
+" http://vim.wikia.com/wiki/Erasing_previously_entered_characters_in_insert_mode
+:set backspace=indent,eol,start
+
 filetype off
 execute pathogen#infect()
 execute pathogen#helptags()
