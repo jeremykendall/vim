@@ -82,3 +82,7 @@ autocmd VimResized * wincmd =
 
 " Open current file in Marked2
 :nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+
+" Do not conceal quotes in vim-json plugin
+" https://github.com/elzr/vim-json
+let g:vim_json_syntax_conceal = 0
