@@ -15,6 +15,7 @@ filetype plugin indent on
 au BufRead,BufNewFile *.pp set filetype=puppet
 au BufRead,BufNewFile *_spec.rb nmap <F8> :!rspec --color %<CR>
 au BufRead,BufNewFile *.twig set syntax=htmljinja
+au BufRead,BufNewFile Vagrantfile set syntax=ruby
 
 " Reload files changed outside vim
 set autoread 
