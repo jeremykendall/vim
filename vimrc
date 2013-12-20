@@ -21,6 +21,8 @@ set clipboard=unnamed
 au BufRead,BufNewFile *.pp set filetype=puppet
 au BufRead,BufNewFile *_spec.rb nmap <F8> :!rspec --color %<CR>
 au BufRead,BufNewFile Vagrantfile set syntax=ruby
+au BufRead,BufNewFile *.twig,*.html.twig set filetype=htmldjango
+au BufRead,BufNewFile *.twig,*.html.twig set syntax=htmljinja
 
 " For solarized coloring
 set t_Co=256
