@@ -43,3 +43,6 @@
 [submodule "bundle/php.vim"]
 	path = bundle/php.vim
 	url = https://github.com/StanAngeloff/php.vim
+[submodule "bundle/vim-twig"]
+	path = bundle/vim-twig
+	url = git@github.com:JCook21/vim-twig.git
