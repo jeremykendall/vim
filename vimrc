@@ -23,6 +23,7 @@ au BufRead,BufNewFile *_spec.rb nmap <F8> :!rspec --color %<CR>
 au BufRead,BufNewFile Vagrantfile set syntax=ruby
 au BufRead,BufNewFile *.twig,*.html.twig set filetype=htmldjango
 au BufRead,BufNewFile *.twig,*.html.twig set syntax=htmljinja
+au BufRead,BufNewFile composer.lock set syntax=json
 
 " For solarized coloring
 set t_Co=256
