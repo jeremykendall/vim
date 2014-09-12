@@ -12,13 +12,16 @@ filetype plugin indent on
 " When the "unnamed" string is included in the 'clipboard' option, the unnamed
 " register is the same as the "* register.  Thus you can yank to and paste the
 " selection without prepending "* to commands.
-set clipboard=unnamed
+if $TMUX == ''
+    set clipboard+=unnamed
+endif
 
 " Make backspace work properly
 " http://vim.wikia.com/wiki/Erasing_previously_entered_characters_in_insert_mode
 :set backspace=indent,eol,start
 
 au BufRead,BufNewFile *.pp set filetype=puppet
+au BufRead,BufNewFile *.pp set syntax=ruby
 au BufRead,BufNewFile *_spec.rb nmap <F8> :!rspec --color %<CR>
 au BufRead,BufNewFile Vagrantfile set syntax=ruby
 au BufRead,BufNewFile *.twig,*.html.twig set filetype=htmldjango
@@ -58,7 +61,7 @@ set shiftround
 set autoindent
 set smartindent
 
-set pastetoggle=<F11>
+:set pastetoggle=zp
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
@@ -108,7 +111,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " ctrlp settings
 " ctrlp ignore
-set wildmode=list:longest
+set wildmode=list,longest,full
 set wildmenu "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore+=*.o,*.obj,*~ "stuff to ignore when tab completing
 set wildignore+=*/tmp/*

@@ -255,11 +255,6 @@ if exists("b:phpgetset_getterTemplate")
 else
   let s:phpgetset_getterTemplate =
     \ "    \n" .
-    \ "    /**\n" .
-    \ "     * Get %varname%\n" .
-    \ "     *\n" .
-    \ "     * @return %varname%\n" .
-    \ "     */\n" .
     \ "    public function %funcname%()\n" .
     \ "    {\n" .
     \ "        return $this->%varname%;\n" .
@@ -272,11 +267,6 @@ if exists("b:phpgetset_setterTemplate")
 else
   let s:phpgetset_setterTemplate =
   \ "    \n" .
-  \ "    /**\n" .
-  \ "     * Set %varname%\n" .
-  \ "     *\n" .
-  \ "     * @param $%varname% the value to set\n" .
-  \ "     */\n" .
   \ "    public function %funcname%($%varname%)\n" .
   \ "    {\n" .
   \ "        $this->%varname% = $%varname%;\n" .
