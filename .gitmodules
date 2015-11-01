@@ -56,3 +56,12 @@
 [submodule "bundle/vim-ansible-yaml"]
 	path = bundle/vim-ansible-yaml
 	url = git://github.com/chase/vim-ansible-yaml.git
+[submodule "bundle/cypher-vim-syntax"]
+	path = bundle/cypher-vim-syntax
+	url = git@github.com:neo4j-contrib/cypher-vim-syntax.git
+[submodule "bundle/vim-obsession"]
+	path = bundle/vim-obsession
+	url = git://github.com/tpope/vim-obsession.git
+[submodule "bundle/vim-slim"]
+	path = bundle/vim-slim
+	url = git@github.com:slim-template/vim-slim.git

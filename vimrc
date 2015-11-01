@@ -20,6 +20,7 @@ endif
 " http://vim.wikia.com/wiki/Erasing_previously_entered_characters_in_insert_mode
 :set backspace=indent,eol,start
 
+au BufRead,BufNewFile .php_cs set filetype=php
 au BufRead,BufNewFile *.pp set filetype=puppet
 au BufRead,BufNewFile *.pp set syntax=ruby
 au BufRead,BufNewFile *_spec.rb nmap <F8> :!rspec --color %<CR>
@@ -194,6 +195,7 @@ let g:php_cs_fixer_config = "default"
 let g:php_cs_fixer_php_path = "php"
 let g:php_cs_fixer_default_mapping = 0
 let g:php_cs_fixer_dry_run = 0
+let g:php_cs_fixer_fixers_list = "-single_blank_line_before_namespace,-pre_increment,-concat_without_spaces,concat_with_spaces,ordered_us"
 map <leader>pcf :call PhpCsFixerFixFile()<CR>
 
 " ctags
@@ -217,3 +219,9 @@ set tags=tags
 " Include git branch, if available, in status line
 " This one is for the vim-fugitive plugin:
 :set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" Taken from http://www.bestofvim.com/tip/trailing-whitespace/
+" show trailing whitespace
+match ErrorMsg '\s\+$'
+" remove trailing whitespace
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
