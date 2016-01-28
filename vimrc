@@ -131,7 +131,7 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
 " ctrlp starting directory
-let g:ctrlp_working_path_mode = ''
+let g:ctrlp_working_path_mode = 'r'
 
 " gist-vim
 let g:gist_open_browser_after_post = 1
