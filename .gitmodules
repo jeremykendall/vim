@@ -53,9 +53,6 @@
 [submodule "bundle/mustache"]
 	path = bundle/mustache
 	url = git://github.com/mustache/vim-mustache-handlebars.git
-[submodule "bundle/vim-ansible-yaml"]
-	path = bundle/vim-ansible-yaml
-	url = git://github.com/chase/vim-ansible-yaml.git
 [submodule "bundle/cypher-vim-syntax"]
 	path = bundle/cypher-vim-syntax
 	url = git@github.com:neo4j-contrib/cypher-vim-syntax.git
@@ -68,3 +65,6 @@
 [submodule "bundle/vim-bracketed-paste"]
 	path = bundle/vim-bracketed-paste
 	url = git@github.com:ConradIrwin/vim-bracketed-paste.git
+[submodule "bundle/ansible-vim"]
+	path = bundle/ansible-vim
+	url = git@github.com:pearofducks/ansible-vim.git
