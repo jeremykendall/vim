@@ -223,3 +223,6 @@ set tags=tags
 match ErrorMsg '\s\+$'
 " remove trailing whitespace
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
+" Settings for python-syntax: https://github.com/hdima/python-syntax
+let python_version_2 = 1

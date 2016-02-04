@@ -68,3 +68,9 @@
 [submodule "bundle/ansible-vim"]
 	path = bundle/ansible-vim
 	url = git@github.com:pearofducks/ansible-vim.git
+[submodule "bundle/python-syntax"]
+	path = bundle/python-syntax
+	url = git@github.com:hdima/python-syntax.git
+[submodule "bundle/PHP-Indenting-for-VIm"]
+	path = bundle/PHP-Indenting-for-VIm
+	url = git@github.com:2072/PHP-Indenting-for-VIm.git
