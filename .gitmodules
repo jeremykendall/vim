@@ -83,3 +83,6 @@
 [submodule "bundle/groovy-syntax"]
 	path = bundle/groovy-syntax
 	url = git@github.com:vim-scripts/groovy.vim.git
+[submodule "bundle/vim-yaml"]
+	path = bundle/vim-yaml
+	url = git@github.com:stephpy/vim-yaml.git
