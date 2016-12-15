@@ -86,3 +86,9 @@
 [submodule "bundle/vim-yaml"]
 	path = bundle/vim-yaml
 	url = git@github.com:stephpy/vim-yaml.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = git@github.com:vim-ruby/vim-ruby.git
+[submodule "bundle/vim-scala"]
+	path = bundle/vim-scala
+	url = git@github.com:derekwyatt/vim-scala.git
