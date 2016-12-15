@@ -28,6 +28,8 @@ au BufRead,BufNewFile Vagrantfile set syntax=ruby
 au BufRead,BufNewFile *.twig,*.html.twig set filetype=htmldjango
 au BufRead,BufNewFile *.twig,*.html.twig set syntax=htmljinja
 au BufRead,BufNewFile composer.lock set syntax=json
+au BufRead,BufNewFile *.yml.dist set syntax=yaml
+au BufRead,BufNewFile *.xml.dist set syntax=xml
 
 " For solarized coloring
 set t_Co=256
@@ -226,3 +228,6 @@ nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 
 " Settings for python-syntax: https://github.com/hdima/python-syntax
 let python_version_2 = 1
+
+" Powerline
+set rtp+=/Users/jeremykendall/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
