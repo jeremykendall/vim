@@ -231,3 +231,6 @@ let python_version_2 = 1
 
 " Powerline
 set rtp+=/Users/jeremykendall/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
+
+" Sane paste w/o indent
+nmap <silent> <leader>p :set paste<CR>"*p:set nopaste<CR>
